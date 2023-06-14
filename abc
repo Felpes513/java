@@ -1,0 +1,33 @@
+package uscs1;
+
+public class node1 {
+	char item;
+	node1 next;
+	
+	public node1 (char item) {
+		this.item = item;
+		this.next = null;
+	}
+	
+	public static void main (String[] args) {
+		
+		String texto = "abc";
+		
+		node1 x1 = new node1('x');
+		node1 x2 = new node1('y');
+		node1 x3 = new node1('z');
+		node1 x4 = new node1('t');
+		
+		x1.next = x3;
+		x4.next = x2;
+		x3.next = x4;
+		
+		node1 trab = x3;
+		
+		while(trab != null) {
+			texto = texto + trab.item;
+			trab = trab.next;
+		}
+		System.out.println(texto);
+	}
+}
