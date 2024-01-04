@@ -1,0 +1,19 @@
+public class Main{
+    public static void main(String[] args){
+        double num1 = 2.0;
+        double num2 = 5.0;
+        double num3 = 9.5;
+        double num4 = 10.0;
+        double media = (num1 + num2 + num3 + num4) /4;
+        
+        if(media >=7){
+            System.out.println("Está aprovado");
+        }
+        else if(media <7 && media >=5){
+            System.out.println("Exame");
+        }
+        else if(media <5){
+            System.out.println("Reprovado");
+        }
+    }
+}
