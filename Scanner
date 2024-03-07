@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+        int i;// declara a variavel que controla a repetição
+        do
+        {
+            System.out.println("Digite um valor positivo");
+            i = sc.nextInt();// atualização
+        }while (i > 0); // teste de continuidade
+    }
+    
+}
