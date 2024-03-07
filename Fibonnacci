@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Escolha o termo da sequencia de Fibonnacci")
+        int termo = nextInt();
+        int novo = 1, pen, ult, conta=3;
+        while(conta <= termo){
+            pen = ult;
+            ult = novo;
+            novo = pen + ult;
+            conta = conta + 1;
+        }
+        System.out.println("0 %do. termo = %d", termo, novo);
+    }
+    
+}
