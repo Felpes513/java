@@ -1,0 +1,32 @@
+import java.util.Map;
+
+
+public class ExemploHashMap{
+	public static void main(String[] args){
+		
+		//Criando um HashMap para armazenar nomes e idades
+		Map<String, Integer> mapaIdades = new HashMap<>();
+		
+		//Adicionando elementos ao HashMap
+		mapaIdades.put("João", 25);
+		mapaIdades.put("Maria", 30);
+		mapaIdades.put("Pedro", 35);
+		
+		//Acessando valores do HashMap
+		int IdadeJoao = mapaIdades.get("João");
+		System.out.println("Idade do João:" + IdadeJoao);
+		
+		//Verificando se um elemento existe no HashMap
+		boolean existeMaria = mapaIdades.containsKey("Maria");
+		System.out.println("Existe Maria?" + existeMaria);
+		
+		//Removando um elemento do HashMap
+		mapaIdades.remove("Pedro");
+		
+		//Iterando sobre os elementos do HashMap
+		for(Map.Entry<String, Integer> entry : mapaIdades.entrySet()) {
+			String nome = entry.getKey();
+			int idade = entry.getValue();
+			System.out.println("Nome:"+ nome +",Idade:" + idade);
+		}
+	}
