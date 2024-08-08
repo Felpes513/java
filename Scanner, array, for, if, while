@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        Scanner scanner= new Scanner(System.in); // scanner serve para o usuario adicionar um valor
+        System.out.println("Olá, seja bem vindo!");
+        System.out.println("Qual o seu nome");
+        String cliente = scanner.nextLine();
+
+        String[] opcoes = {"Machado", "Martelo", "Alicate", "Chave inglesa"};// isso é um array
+        double[] precos = {100.0, 150.0, 75.5, 80.0};// isso também, pode se colocar varios valores
+
+        for (int i = 0; i < opcoes.length; i++){
+            System.out.println((i + 1) + "."+ opcoes[i] + " -R$" + precos[i]);
+        }
+
+        System.out.println("O que deseja?");
+        int escolha = scanner.nextInt();
+
+        if (escolha > 0 && escolha <= opcoes.length){
+            System.out.println(opcoes[escolha] + " é R$" + precos[escolha] );
+        }else{
+        System.out.println("Desculpe mas não temos disponiveis no momento :( ");
+        }
+
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Vai levar? " + cliente);
+        String resposta = scanner1.nextLine(); // Captura a resposta do usuário
+
+        // laço de repetição até que o usuario digite sim ou não.
+        while (true) {// ultilizar o true para wue o loop seja executado e ir para proxima linha
+            // Comparar a resposta do usuário
+            if (resposta.equalsIgnoreCase("sim")) {
+                System.out.println("Obrigado! Volte sempre :)");
+                break;// para o laço caso a resposta seja sim
+            } else if (resposta.equalsIgnoreCase("não")) {
+                System.out.println("Tudo bem! Volte sempre :)");
+                break;// para o laço caso a resposta seja não
+            } else {
+                System.out.println("Por favor, responda com 'sim' ou 'não' :|");
+            }break;
+        }
+    }
+}
+//equalsIgnoreCase é usado para comparar duas strings, indepentemente se estão em letras
+//maiuculas ou minusculas, elas serão lidas e definidas pelos seus caracteres
